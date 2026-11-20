@@ -10,7 +10,7 @@ function card(a) {
     <div class="category">${a.cat}</div>
     <h3>${a.title}</h3>
     <p>${a.desc}</p>
-    <div class="byline">${a.author} · ${a.read}</div>
+    <div class="byline">${a.date ? a.date : a.author} · ${a.read}</div>
   </article>`;
 }
 
@@ -19,13 +19,16 @@ function fill(id, arr) {
 }
 
 // Which stories appear on each section page
-fill('homeGrid',    [articles[1], articles[2], articles[5]]);
-fill('beatGrid',    [articles[3], articles[4], articles[6]]);
-fill('founderGrid', [articles[0], articles[1], articles[3], articles[4], articles[8]]);
-fill('startupGrid', [articles[6], articles[7], articles[8]]);
-fill('fundingGrid', [articles[2], articles[7]]);
-fill('smallGrid',   [articles[5], articles[6]]);
-fill('womenGrid',   [articles[3]]);
+const byId = id => articles.find(a => a.id === id);
+const pick = ids => ids.map(byId);
+
+fill('homeGrid',    pick(['karya-saarthi', 'testkart', 'spinoto']));
+fill('beatGrid',    pick(['women-build', 'young-founders', 'innovation']));
+fill('founderGrid', pick(['karya-saarthi', 'testkart', 'spinoto', 'first-customer', 'failed-plan', 'women-build', 'young-founders', 'founder-interview']));
+fill('startupGrid', pick(['innovation', 'startup-announcement', 'founder-interview']));
+fill('fundingGrid', pick(['funding-question', 'startup-announcement']));
+fill('smallGrid',   pick(['small-business', 'innovation']));
+fill('womenGrid',   pick(['women-build']));
 
 /* ---------- Latest page: filters, search, sort ---------- */
 let chosen = 'All';
@@ -73,15 +76,17 @@ function article(id) {
     <h1 class="article-title">${a.title}</h1>
     <p class="standfirst">${a.desc}</p>
     <div class="article-meta">
-      <span>By ${a.author}</span><span>${a.read}</span><span>Navodya Journal</span>
+      ${a.date ? `<span>${a.date}</span>` : `<span>By ${a.author}</span>`}<span>${a.read}</span><span>Navodya Journal</span>
     </div>
-    <div class="demo-note">DEMONSTRATION ARTICLE — This is sample editorial copy created to demonstrate the publication layout. It is not a reported news story. Replace it with original, researched and fact-checked reporting before publication.</div>
+    ${a.demo ? `<div class="demo-note">DEMONSTRATION ARTICLE — This is sample editorial copy created to demonstrate the publication layout. It is not a reported news story. Replace it with original, researched and fact-checked reporting before publication.</div>` : ''}
     <img class="article-hero" src="${a.img}" alt="Illustrative editorial photograph">
     <div class="caption">Illustrative photograph · Image source: Unsplash</div>
     <div class="article-body">
       ${a.body.map(p => `<h2>${p[0]}</h2><p>${p[1]}</p>`).join('')}
-      <blockquote>Good business stories are not only about what happened. They explain why it mattered, what was learned and what remains uncertain.</blockquote>
-      <p><b>Editorial note:</b> A published report should include named authorship, source links, image credits and any required disclosures.</p>
+      ${a.source
+        ? `<p><b>Source:</b> This summary is based on reporting by ${a.source.name}. Figures are as reported there and have not been independently verified by Navodya. <a href="${a.source.url}" target="_blank" rel="noopener">Read the original story →</a></p>`
+        : `<blockquote>Good business stories are not only about what happened. They explain why it mattered, what was learned and what remains uncertain.</blockquote>
+      <p><b>Editorial note:</b> A published report should include named authorship, source links, image credits and any required disclosures.</p>`}
     </div>
     <a class="text-link" href="#latest">← Back to the newsroom</a>`;
 
