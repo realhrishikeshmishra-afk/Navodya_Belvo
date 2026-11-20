@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#090d12">
+    <meta name="description" content="Navodya is an independent digital publication covering founders, startups, business, funding and the realities of building something from scratch.">
+    <title>NAVODYA — Stories Behind Every Business</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta property="og:title" content="NAVODYA — Stories Behind Every Business">
+    <meta property="og:description" content="Navodya is an independent digital publication covering founders, startups, business, funding and the realities of building something from scratch.">
+    <meta property="og:type" content="website">
+  </head>
+  <body>
+    <div class="topstrip">
+      <div class="wrap">
+        <span>Independent stories. Real business. Human ambition.</span><span>Sunday, 15 November 2026 · India</span>
+      </div>
+    </div>
+    <header>
+      <div class="wrap masthead">
+        <a href="#home" class="wordmark">NAVO<span>D</span>YA<small>STORIES BEHIND EVERY BUSINESS</small></a>
+        <div class="mast-right">
+          <div class="edition">
+            <b>THE BUSINESS & FOUNDERS JOURNAL</b>Ideas, people and the work in between
+          </div>
+          <div class="edition">
+            <b>VOL. 01</b>Digital Edition
+          </div>
+        </div>
+      </div>
+      <div class="navrow wrap">
+        <nav class="navlinks" id="navlinks">
+          <a href="#home" data-page="home">Home</a><a href="#latest" data-page="latest">Latest</a><a href="#founders" data-page="founders">Founder stories</a><a href="#startups" data-page="startups">Startups</a><a href="#funding" data-page="funding">Funding</a><a href="#small-business" data-page="small-business">Small business</a><a href="#women" data-page="women">Women in business</a><a href="https://cozy-truffle-30306e.netlify.app/" target="_blank" rel="noopener">About</a>
+        </nav>
+        <div class="nav-tools">
+          <button class="search-trigger" onclick="openSearch()" aria-label="Search">⌕</button>
+          <a class="pitch-link" href="#pitch">Pitch a story ↗</a>
+          <button class="menu" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>
+        </div>
+      </div>
+    </header>
+    <div class="breaking">
+      <div class="wrap">
+        <b>THE EDITOR'S NOTE</b><span>We look beyond the launch announcement — to the decisions, setbacks and people that make a business story worth telling.</span>
+      </div>
+    </div>
+    <main>
+      <div class="page active" id="page-home">
+        <div class="wrap">
+          <div class="home-intro">
+            <div>
+              <div class="eyebrow">
+                The Navodya Journal · Issue 001
+              </div>
+              <h1>Business is personal.</h1>
+            </div>
+            <p>Behind every company is a series of human decisions. We report the ideas, risks, failures and persistence behind the work.</p>
+          </div>
+          <div class="lead-layout">
+            <article class="lead" onclick="article('first-customer')">
+              <div class="lead-image">
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1500&q=85" alt="Team collaborating around a table">
+                <span class="image-credit">ILLUSTRATIVE IMAGE · UNSPLASH</span>
+              </div>
+              <div class="lead-copy">
+                <div class="category">
+                  The founder's desk · Entrepreneurship
+                </div>
+                <h2>The first customer is a beginning. Building a business that lasts is the real work.</h2>
+                <div class="dek">
+                  A closer look at the everyday decisions behind early traction: listening to customers, managing cash and learning to deliver on a promise.
+                </div>
+                <div class="byline">
+                  By <b>Navodya Editorial Desk</b> &nbsp;·&nbsp; 6 min read &nbsp;·&nbsp; DEMO STORY
+                </div>
+              </div>
+            </article>
+            <aside class="side-leads">
+              <div class="side-title">
+                The latest briefing
+              </div>
+              <article class="side-story" onclick="article('failed-plan')">
+                <div class="category">
+                  Failure & comebacks
+                </div>
+                <h3>When the first plan fails, what should a founder learn next?</h3>
+                <p>Turning a disappointing result into a sharper business question.</p>
+              </article>
+              <article class="side-story" onclick="article('funding-question')">
+                <div class="category">
+                  Funding & finance
+                </div>
+                <h3>Before raising capital, know what the money needs to prove.</h3>
+                <p>Milestones, runway and the decisions behind a funding plan.</p>
+              </article>
+              <article class="side-story" onclick="article('women-build')">
+                <div class="category">
+                  Women in business
+                </div>
+                <h3>Building on your own terms: the questions behind the founder story.</h3>
+                <p>Leadership narratives that go beyond the headline.</p>
+              </article>
+              <article class="side-story" onclick="article('young-founders')">
+                <div class="category">
+                  Young entrepreneurs
+                </div>
+                <h3>Can you build a venture while you're still learning?</h3>
+                <p>Small experiments, time and the realities of a student founder.</p>
+              </article>
+            </aside>
+          </div>
+        </div>
+        <section class="section">
+          <div class="wrap">
+            <div class="section-head">
+              <h2>From the newsroom</h2>
+              <a href="#latest">View all stories ↗</a>
+            </div>
+            <div class="story-grid" id="homeGrid">
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="wrap split-feature">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Entrepreneurs discussing a business plan">
+            <div>
+              <div class="category">
+                The long read · Small business
+              </div>
+              <h3>Not every business is built for a funding headline.</h3>
+              <p>Some founders choose steady growth, loyal customers and control over the pace of expansion. Their stories deserve the same thoughtful attention as the next big round.</p>
+              <div class="byline">
+                NAVODYA EXPLAINER · DEMONSTRATION CONTENT
+              </div>
+              <a class="text-link" href="#small-business">Explore small business ↗</a>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="wrap">
+            <div class="section-head">
+              <h2>Explore the beats</h2>
+              <p>Ten editorial lanes. One curious point of view.</p>
+            </div>
+            <div class="story-grid" id="beatGrid">
+            </div>
+          </div>
+        </section>
+        <div class="wrap">
+          <div class="newsletter">
+            <div>
+              <h2>The Navodya Brief.</h2>
+              <p>A considered digest of founder journeys, startup developments and business ideas. No noise, just stories worth your time.</p>
+            </div>
+            <form onsubmit="newsletter(event)">
+              <input type="email" required placeholder="Your email address" aria-label="Email address">
+              <button>SUBSCRIBE ↗</button>
+            </form>
+          </div>
+          <div id="newsSuccess" class="success">
+            Thanks — this demo captures the interaction only. Connect a newsletter service to activate delivery.
+          </div>
+        </div>
+      </div>
+      <div class="page" id="page-latest">
+        <div class="wrap">
+          <div class="page-head">
+            <div class="eyebrow">
+              The newsroom
+            </div>
+            <h1>Latest stories.</h1>
+            <p>Reporting, explainers and founder perspectives on the ideas and realities shaping business. The articles currently shown are demonstration copy, not published reporting.</p>
+          </div>
+          <div class="searchbar">
+            <input id="listSearch" placeholder="Search headlines, topics or keywords…" oninput="renderList()">
+            <select id="sort" onchange="renderList()">
+              <option value="default">Editor's selection</option>
+              <option value="az">Headline A–Z</option>
+            </select>
+          </div>
+          <div class="filters" id="filters">
+          </div>
+          <div class="story-grid" id="allGrid">
+          </div>
+          <p id="empty" style="display:none;color:var(--muted)">No stories found. Try a different keyword.</p>
+        </div>
+      </div>
+      <div class="page" id="page-founders">
+        <div class="wrap">
+          <div class="page-head">
+            <div class="eyebrow">
+              People behind the progress
+            </div>
+            <h1>Founder stories.</h1>
+            <p>The person behind the pitch: origin stories, difficult decisions, lessons and the everyday work of building a company.</p>
+          </div>
+          <div class="story-grid" id="founderGrid">
+          </div>
+        </div>
+      </div>
+      <div class="page" id="page-startups">
+        <div class="wrap">
+          <div class="page-head">
+            <div class="eyebrow">
+              The startup ecosystem
+            </div>
+            <h1>Startups & innovation.</h1>
+            <p>New ventures, emerging industries, business models and the shifts changing how people work, buy and build.</p>
+          </div>
+          <div class="story-grid" id="startupGrid">
+          </div>
+        </div>
+      </div>
+      <div class="page" id="page-funding">
+        <div class="wrap">
+          <div class="page-head">
+            <div class="eyebrow">
+              Capital & company building
+            </div>
+            <h1>Funding & finance.</h1>
+            <p>Understand the language of capital, business development and financial decisions. Educational content is not investment advice.</p>
+          </div>
+          <div class="story-grid" id="fundingGrid">
+          </div>
+        </div>
+      </div>
+      <div class="page" id="page-small-business">
+        <div class="wrap">
+          <div class="page-head">
+            <div class="eyebrow">
+              Beyond the funding headlines
+            </div>
+            <h1>Small business.</h1>
+            <p>Independent businesses, bootstrapped ventures and founders creating value one customer at a time.</p>
+          </div>
+          <div class="story-grid" id="smallGrid">
+          </div>
+        </div>
+      </div>
+      <div class="page" id="page-women">
+        <div class="wrap">
+          <div class="page-head">
+            <div class="eyebrow">
+              Leadership & enterprise
+            </div>
+            <h1>Women in business.</h1>
+            <p>Profiles and perspectives on women building, leading and reshaping businesses across industries.</p>
+          </div>
+          <div class="story-grid" id="womenGrid">
+          </div>
+        </div>
+      </div>
+      <div class="page" id="page-article">
+        <div class="wrap">
+          <article class="article" id="articleBody">
+          </article>
+        </div>
+      </div>
+      <div class="page" id="page-about">
+        <div class="wrap">
+          <div class="page-head">
+            <div class="eyebrow">
+              About the publication
+            </div>
+            <h1>We tell the story<br>behind the business.</h1>
+            <p>Navodya is a digital publication focused on founder stories, entrepreneurial journeys, startup struggles and business developments.</p>
+          </div>
+          <div class="about-layout">
+            <div>
+              <h2>Beyond the success headline.</h2>
+              <p>We believe a business story is bigger than a launch, a valuation or a milestone. It is also the uncertainty before a decision, the sacrifices behind a result, the rejection that changed a plan and the lessons learned while building something from scratch.</p>
+              <p>Our aim is to give those stories a thoughtful place — from young entrepreneurs and women business leaders to small businesses, bootstrapped startups and emerging industries.</p>
+              <p>We want to be useful to readers, fair to the people we cover and careful with the facts we publish.</p>
+            </div>
+            <div class="principles">
+              <div class="principle">
+                <b>01 / ORIGINALITY</b>
+                <h3>Stories, not press releases.</h3>
+                <p>We aim to add reporting, context and a clear editorial angle.</p>
+              </div>
+              <div class="principle">
+                <b>02 / VERIFICATION</b>
+                <h3>Check the details.</h3>
+                <p>Names, figures, dates and company claims should be verified and attributed.</p>
+              </div>
+              <div class="principle">
+                <b>03 / TRANSPARENCY</b>
+                <h3>Disclose paid work.</h3>
+                <p>Sponsored content must be clearly labelled and separated from independent reporting.</p>
+              </div>
+              <div class="principle">
+                <b>04 / ACCOUNTABILITY</b>
+                <h3>Correct the record.</h3>
+                <p>Material errors should be corrected transparently.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page" id="page-pitch">
+        <div class="wrap">
+          <div class="page-head">
+            <div class="eyebrow">
+              Talk to the editorial desk
+            </div>
+            <h1>There is a story<br>worth telling.</h1>
+            <p>Know a founder, business or entrepreneurial journey we should explore? Send us a story pitch. Tell us what happened, why it matters and where we can verify the details.</p>
+          </div>
+          <div class="pitch-wrap">
+            <h2>Pitch a story to Navodya.</h2>
+            <p>Share enough context for our editorial team to understand the idea. A pitch is not a guarantee of publication.</p>
+            <form id="pitchForm" onsubmit="pitch(event)">
+              <div class="formgrid">
+                <label>
+                  Your name
+                  <input required name="name" placeholder="Full name">
+                </label>
+                <label>
+                  Email address
+                  <input required type="email" name="email" placeholder="you@example.com">
+                </label>
+                <label>
+                  Founder / company name
+                  <input name="company" placeholder="Name of founder or venture">
+                </label>
+                <label>
+                  Story category
+                  <select name="category">
+                    <option>Founder story</option>
+                    <option>Startup news</option>
+                    <option>Failure & comeback</option>
+                    <option>Women in business</option>
+                    <option>Funding & finance</option>
+                    <option>Small business</option>
+                    <option>Innovation</option>
+                  </select>
+                </label>
+                <label class="full">
+                  What is the story?
+                  <textarea required name="story" placeholder="What happened? What makes this story worth exploring?"></textarea>
+                </label>
+                <label class="full">
+                  Sources or supporting links
+                  <input name="sources" placeholder="Company website, public reports, interview links…">
+                </label>
+              </div>
+              <div class="formhint">
+                Prototype notice: this form does not transmit data. A secure backend, privacy notice and editorial inbox must be connected before collecting real submissions.
+              </div>
+              <button class="submit">SEND STORY PITCH ↗</button>
+              <div id="pitchSuccess" class="success">
+                Demo submission received in this page. Connect a backend to deliver pitches to the editorial team.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="page" id="page-standards">
+        <div class="wrap">
+          <div class="page-head">
+            <div class="eyebrow">
+              How we work
+            </div>
+            <h1>Editorial standards.</h1>
+            <p>A proposed editorial framework based on Navodya's project brief. It should be reviewed and formally approved by the publisher before launch.</p>
+          </div>
+          <div class="about-layout">
+            <div>
+              <h2>Accuracy before urgency.</h2>
+              <p>Every article should be original and properly researched. Verify names, statistics, company information and dates. Attribute information to its source, distinguish claims from independently verified facts and avoid fabricated quotes or exaggerated achievements.</p>
+              <h2>Storytelling with context.</h2>
+              <p>Articles should focus on the real story rather than simply promoting a company. Include relevant context, explain what is known and what remains uncertain, and seek a fair response where appropriate.</p>
+              <h2>Transparency and corrections.</h2>
+              <p>Clearly disclose paid or sponsored content. Correct material errors visibly and promptly. Do not imply that payment guarantees favourable independent coverage.</p>
+            </div>
+            <div class="principles">
+              <div class="principle">
+                <b>REPORTING CHECKLIST</b>
+                <h3>Before an article goes live</h3>
+                <p>Confirm spelling, titles, dates and figures.</p>
+              </div>
+              <div class="principle">
+                <b>SOURCE CHECK</b>
+                <h3>Keep a source trail</h3>
+                <p>Record links, documents, interview dates and image credits.</p>
+              </div>
+              <div class="principle">
+                <b>EDITORIAL REVIEW</b>
+                <h3>Review the framing</h3>
+                <p>Check headlines for accuracy, fairness and unnecessary hype.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              NAVO<span>D</span>YA
+            </div>
+            <p>Stories behind every business. A digital journal about founders, ideas and the realities of building something from scratch.</p>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <a href="#latest">Latest stories</a><a href="#founders">Founder stories</a><a href="#startups">Startups</a><a href="#funding">Funding & finance</a>
+          </div>
+          <div>
+            <h4>Navodya</h4>
+            <a href="https://cozy-truffle-30306e.netlify.app/" target="_blank" rel="noopener">About us</a><a href="#standards">Editorial standards</a><a href="#pitch">Pitch a story</a>
+          </div>
+          <div>
+            <h4>Our focus</h4>
+            <a href="#small-business">Small business</a><a href="#women">Women in business</a><a href="#startups">Innovation</a>
+          </div>
+        </div>
+        <div class="copyright">
+          <span>© <span id="year"></span> Navodya. All rights reserved.</span><span>Independent stories. Real business. Human ambition.</span>
+        </div>
+      </div>
+    </footer>
+    <div class="overlay" id="searchOverlay" onclick="if(event.target===this)closeSearch()">
+      <div class="search-dialog">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <b style="font:25px var(--serif)">Search Navodya</b>
+          <button onclick="closeSearch()" style="background:none;border:0;color:white;font-size:24px">×</button>
+        </div>
+        <input id="searchInput" placeholder="Search headlines, topics, founders…" oninput="searchModal()">
+        <div id="searchResults">
+        </div>
+      </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
